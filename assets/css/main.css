@@ -1,11 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
-/*
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -112,6 +108,70 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+/* Ensure the article block acts as a vertical column container */
+article:has(.skills-list) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3rem 2.5rem !important;
+}
+
+/* CRITICAL FIX: Pulls your text layers cleanly in front of the theme's orange overlays */
+article:has(.skills-list) h3,
+article:has(.skills-list) h4,
+article:has(.skills-list) p {
+    position: relative;
+    z-index: 100 !important;
+    color: #ffffff !important; /* Forces absolute white */
+}
+
+/* Subtle line separator styling directly under the header */
+article:has(.skills-list) h3 {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+/* Set up the split columns right below the title */
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Column behavior details */
+.skills-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.skills-group h4 {
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.skills-group p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8) !important; /* Slightly soft white for body readability */
+    margin-bottom: 0;
+}
+
+/* Mobile responsive collapse */
+@media screen and (max-width: 736px) {
+    .skills-list {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+}
 
 /* Type */
 
