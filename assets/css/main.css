@@ -108,7 +108,10 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
-/* Ensure the article block acts as a vertical column container */
+
+		
+
+		/* Ensure the article block acts as a vertical column container */
 article:has(.skills-list) {
     display: flex;
     flex-direction: column;
@@ -2348,10 +2351,11 @@ article:has(.skills-list) h3 {
 }
 
 #banner .profile-image img {
-    width: 280px;
-    height: 420px;
-    object-fit: cover;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     border-radius: 8px;
+	max-width: 100%;
 }
 
 	ul.actions {
