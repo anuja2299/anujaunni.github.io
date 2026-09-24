@@ -2341,13 +2341,14 @@ article:has(.skills-list) h3 {
 }
 
 #banner .intro {
-    width: 65%;
+    width: 70%;
 }
 
 #banner .profile-image {
     width: 30%;
     display: flex;
     justify-content: center;
+	margin-top: 40px;
 }
 
 #banner .profile-image img {
